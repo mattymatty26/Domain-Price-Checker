@@ -1,0 +1,8 @@
+name: domain-checker
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python-dotenv
+  - python=3.10
+  - requests
