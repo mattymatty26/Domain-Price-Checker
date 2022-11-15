@@ -6,17 +6,17 @@ import time
 from dotenv import load_dotenv
 import os
 
-#load the environment variables 
+#load the environment variables that include the Domain API key 
 load_dotenv()
 client_id = os.getenv("client_id")
 client_secret = os.getenv("client_secret")
 
 
 
-property_id = "2018198229"
-starting_max = 1000000
-starting_min = 0
-increment = 50000
+property_id = "2018198229" #Comment this with the correct Property ID
+starting_max = 1000000 #This sets the highest price the bot will iterate to
+starting_min = 0 #The starting price the bot will iterate from
+increment = 50000 #The increments the bot will jump through
 
 response = requests.post('https://auth.domain.com.au/v1/connect/token',data = {'client_id':client_id,"client_secret":client_secret,"grant_type":"client_credentials","scope":"api_listings_read","Content-Type":"text/json"})
 token=response.json()
