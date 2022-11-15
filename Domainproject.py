@@ -6,7 +6,7 @@ import time
 from dotenv import load_dotenv
 import os
 
-#load the environment variables that include the Domain API key 
+#load Domain API ID and Secret which is saved as an environment variable
 load_dotenv()
 client_id = os.getenv("client_id")
 client_secret = os.getenv("client_secret")
